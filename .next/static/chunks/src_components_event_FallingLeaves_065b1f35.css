@@ -1,0 +1,42 @@
+/* [project]/src/components/event/FallingLeaves.css [app-client] (css) */
+.falling-leaves {
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.leaf {
+  background-color: #228b22;
+  border-radius: 0 50%;
+  width: 15px;
+  height: 15px;
+  animation: linear infinite fall, 2s ease-in-out infinite alternate sway;
+  position: absolute;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-10vh)rotate(0);
+  }
+
+  to {
+    transform: translateY(110vh)rotate(720deg);
+  }
+}
+
+@keyframes sway {
+  from {
+    transform: translateX(-5px);
+  }
+
+  to {
+    transform: translateX(5px);
+  }
+}
+
+
+/*# sourceMappingURL=src_components_event_FallingLeaves_065b1f35.css.map*/

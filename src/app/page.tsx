@@ -34,7 +34,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { useToast } from "@/hooks/use-toast";
 import { addAttendee } from '@/actions/attendees';
-import FallingPetals from '@/components/event/FallingPetals';
+
 import FlickeringLight from '@/components/event/FlickeringLight';
 
 export default function HomePage() {
@@ -138,6 +138,7 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground relative overflow-auto sm:overflow-hidden">
+
       <FlickeringLight />
       <Image 
         src="/flowers_deco/elegant-floral-background.jpeg"

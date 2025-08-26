@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Kendyr/Downloads/Invitacion_XV_Fernanda/src/components/event/FallingLeaves.css"],"sourcesContent":[".falling-leaves {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  pointer-events: none;\n  z-index: 9999;\n}\n\n.leaf {\n  position: absolute;\n  width: 15px;\n  height: 15px;\n  background-color: #228B22; /* Forest Green */\n  border-radius: 0 50% 0 50%;\n  animation: fall linear infinite, sway 2s ease-in-out infinite alternate;\n}\n\n@keyframes fall {\n  from {\n    transform: translateY(-10vh) rotate(0deg);\n  }\n  to {\n    transform: translateY(110vh) rotate(720deg);\n  }\n}\n\n@keyframes sway {\n  from {\n    transform: translateX(-5px);\n  }\n  to {\n    transform: translateX(5px);\n  }\n}"],"names":[],"mappings":"AAAA;;;;;;;;;;AAUA;;;;;;;;;AASA;;;;;;;;;;AASA","debugId":null}}]
+}

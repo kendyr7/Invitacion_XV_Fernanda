@@ -2274,54 +2274,13 @@ body {
   font-style: normal;
 }
 
-.petals-container {
-  pointer-events: none;
-  z-index: 9999;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-}
-
-.petal {
-  background-color: red;
-  animation: linear infinite fall, ease-in-out infinite sway;
-  position: absolute;
-  top: -50px;
-}
-
-.petal img {
-  display: block;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(0);
-  }
-
-  100% {
-    transform: translateY(100vh);
-  }
-}
-
-@keyframes sway {
-  0%, 100% {
-    transform: translateX(0)rotate(0);
-  }
-
-  50% {
-    transform: translateX(40px)rotate(20deg);
-  }
-}
-
 .flickering-light-center {
   pointer-events: none;
   z-index: 1;
-  background: radial-gradient(circle, #ffdc9640, #0000 70%);
-  width: 70%;
-  height: 70%;
+  background: radial-gradient(circle, #ffdc9640, #0000 50%);
+  border-radius: 20%;
+  width: 100%;
+  height: 100%;
   animation: 4s infinite alternate flicker-center;
   position: absolute;
   top: 50%;
