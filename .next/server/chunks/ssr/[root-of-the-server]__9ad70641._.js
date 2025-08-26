@@ -179,8 +179,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$utils$2e$ts__$
 ;
 ;
 const metadata = {
-    title: 'Invitacion XV Valentina',
-    description: 'An elegant invitation to our special event.',
+    title: 'Invitación XV Años Fernanda Lara',
+    description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
     icons: {
         icon: '/favicon-32x32.png'
     }

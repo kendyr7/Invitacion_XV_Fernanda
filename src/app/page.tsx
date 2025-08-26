@@ -146,7 +146,7 @@ export default function HomePage() {
       />
       
       <div 
-        className="relative z-10 flex flex-col items-center text-center max-w-2xl w-full bg-background/80 dark:bg-neutral-900/80 backdrop-blur-md rounded-xl shadow-2xl my-8 animate-in fade-in slide-in-from-bottom-10 duration-700 bg-[url('/paper-texture.jpg')] bg-cover bg-center overflow-hidden"
+        className="relative z-10 flex flex-col items-center text-center max-w-2xl w-full bg-background/80 dark:bg-neutral-900/80 backdrop-blur-md rounded-xl shadow-2xl my-8 animate-in fade-in slide-in-from-bottom-10 duration-700 bg-[url('/paper-texture.png')] bg-cover bg-center overflow-hidden"
       >
         <div className="relative w-full h-screen">
           <Image
@@ -156,9 +156,9 @@ export default function HomePage() {
             objectFit="cover"
             className="z-0"
           />
-          <div className="absolute inset-0 flex flex-col items-center justify-end z-10 p-8 bg-gradient-to-t from-black/90 to-transparent">
+          <div className="absolute inset-0 flex flex-col items-center justify-end z-10 p-8 bg-gradient-to-t from-black/100 to-transparent">
             <p className="font-headline text-3xl sm:text-4xl text-white mt-2 tracking-widest">Mis XV Años</p>
-            <p className="font-delistan text-7xl sm:text-9xl text-white">Fernanda Lara</p>
+            <p className="font-delistan text-7xl sm:text-9xl text-white">Fernanda Lara Morales</p>
           </div>
         </div>
         <div className="mt-12 relative z-10 flex flex-col items-center text-center space-y-8 sm:space-y-10 p-4 sm:p-8">
@@ -321,7 +321,7 @@ export default function HomePage() {
         </div>
 
         {/* Footer */}
-        <footer className="w-full text-center py-4 bg-background/80 dark:bg-neutral-900/80 text-foreground/60 text-xs bg-[url('/paper-texture.jpg')] bg-cover bg-center backdrop-blur-md">
+        <footer className="w-full text-center py-4 bg-background/80 dark:bg-neutral-900/80 text-foreground/60 text-xs bg-[url('/paper-texture.png')] bg-cover bg-center backdrop-blur-md">
           <p>Creado por Kendyr Quintanilla </p>
         </footer>
 
