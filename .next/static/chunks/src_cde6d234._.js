@@ -509,11 +509,11 @@ const CountdownTimer = ({ targetDate })=>{
             value: timeLeft.hours
         },
         {
-            label: 'Minutos',
+            label: 'min',
             value: timeLeft.minutes
         },
         {
-            label: 'Segundos',
+            label: 'seg',
             value: timeLeft.seconds
         }
     ];

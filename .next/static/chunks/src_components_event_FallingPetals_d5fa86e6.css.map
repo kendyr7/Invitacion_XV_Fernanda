@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Kendyr/Downloads/Invitacion_XV_Fernanda/src/components/event/FallingPetals.css"],"sourcesContent":[".petals-container {\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100%;\n    height: 100%;\n    pointer-events: none;\n    overflow: hidden;\n    z-index: 9999;\n  }\n  \n  .petal {\n    position: absolute;\n    top: -50px;\n    animation: fall linear infinite, sway ease-in-out infinite;\n  }\n  \n  .petal img {\n    display: block;\n  }\n  \n  @keyframes fall {\n    0% {\n      transform: translateY(0);\n    }\n    100% {\n      transform: translateY(100vh);\n    }\n  }\n  \n  @keyframes sway {\n    0%, 100% {\n      transform: translateX(0) rotate(0);\n    }\n    50% {\n      transform: translateX(40px) rotate(20deg);\n    }\n  }"],"names":[],"mappings":"AAAA;;;;;;;;;;;AAWE;;;;;;AAMA;;;;AAIA;;;;;;;;;;AASA","debugId":null}}]
+}

@@ -34,6 +34,8 @@ import {
 import { Button } from '@/components/ui/button';
 import { useToast } from "@/hooks/use-toast";
 import { addAttendee } from '@/actions/attendees';
+import FallingPetals from '@/components/event/FallingPetals';
+import FlickeringLight from '@/components/event/FlickeringLight';
 
 export default function HomePage() {
   const [isOpened, setIsOpened] = useState(false);
@@ -136,6 +138,7 @@ export default function HomePage() {
 
   return (
     <main className="flex flex-col items-center justify-center min-h-screen bg-background text-foreground relative overflow-auto sm:overflow-hidden">
+      <FlickeringLight />
       <Image 
         src="/flowers_deco/elegant-floral-background.jpeg"
         fill
@@ -184,7 +187,7 @@ export default function HomePage() {
             className="animate-in fade-in duration-1000 delay-700 text-primary"
           />
 
-          <div className="animate-in fade-in duration-1000 delay-900">
+          <div className="relative animate-in fade-in duration-1000 delay-900">
             <Image
               src="/decor1.png"
               alt="Mis XV Años"
@@ -192,6 +195,7 @@ export default function HomePage() {
               height={242}
               data-ai-hint="quinceanera logo"
             />
+            <div className="flickering-light-center"></div>
           </div>
 
           <div className="w-full max-w-md animate-in fade-in duration-1000 delay-800">
@@ -207,22 +211,6 @@ export default function HomePage() {
               className="w-full h-auto rounded-lg shadow-lg"
               data-ai-hint="quinceanera portrait"
             />
-          </div>
-
-          <div className="w-full animate-in fade-in duration-1000 delay-1000">
-            <SectionCard
-              title="Ceremonia Religiosa"
-              locationButton={{ text: "Ver Ubicación", url: "https://maps.app.goo.gl/urnxoQk9w1md1kYGA" }}
-              titleClassName="text-primary"
-            >
-              <div className="flex flex-col items-center space-y-2 mb-3">
-                 <Image src="/church.png" alt="Iglesia Icon" width={40} height={40} className="shrink-0" data-ai-hint="church building"/>
-              </div>
-              <div className="mt-1 space-y-1 text-center">
-                <p className="flex items-center justify-center">Parroquia Jesús de la Divina Misericordia</p>
-                <p className="flex items-center justify-center"><i>Managua, 5:00 PM</i></p>
-              </div>
-            </SectionCard>
           </div>
           
           <div className="w-full animate-in fade-in duration-1000 delay-1100">

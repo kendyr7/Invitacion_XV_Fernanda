@@ -1756,24 +1756,16 @@ body {
   vertical-align: middle;
 }
 
-.font-body {
-  font-family: var(--font-crimson-text), serif;
+.font-bellisa {
+  font-family: Bellisa, cursive;
 }
 
-.font-delistan {
-  font-family: Delistan, cursive;
-}
-
-.font-headline {
+.font-body, .font-headline {
   font-family: var(--font-crimson-text), serif;
 }
 
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-}
-
-.font-bellisa {
-  font-family: Bellisa, cursive;
 }
 
 .text-2xl {
@@ -1969,10 +1961,6 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
-.text-secondary {
-  color: hsl(var(--secondary));
-}
-
 .underline-offset-4 {
   text-underline-offset: 4px;
 }
@@ -2164,10 +2152,6 @@ body {
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
-.delay-1000 {
-  transition-delay: 1s;
-}
-
 .delay-200 {
   transition-delay: .2s;
 }
@@ -2252,10 +2236,6 @@ body {
   animation-duration: .7s;
 }
 
-.delay-1000 {
-  animation-delay: 1s;
-}
-
 .delay-200 {
   animation-delay: .2s;
 }
@@ -2292,6 +2272,73 @@ body {
   src: url("/fonts/Bellisa Script Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+}
+
+.petals-container {
+  pointer-events: none;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.petal {
+  background-color: red;
+  animation: linear infinite fall, ease-in-out infinite sway;
+  position: absolute;
+  top: -50px;
+}
+
+.petal img {
+  display: block;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: translateX(0)rotate(0);
+  }
+
+  50% {
+    transform: translateX(40px)rotate(20deg);
+  }
+}
+
+.flickering-light-center {
+  pointer-events: none;
+  z-index: 1;
+  background: radial-gradient(circle, #ffdc9640, #0000 70%);
+  width: 70%;
+  height: 70%;
+  animation: 4s infinite alternate flicker-center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes flicker-center {
+  0%, 100% {
+    opacity: .7;
+    transform: translate(-50%, -50%)scale(.95);
+  }
+
+  50% {
+    opacity: 1.2;
+    transform: translate(-50%, -50%)scale(1.1);
+  }
 }
 
 .file\:border-0::file-selector-button {
@@ -3220,11 +3267,6 @@ body {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-8xl {
-    font-size: 6rem;
-    line-height: 1;
   }
 
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"] {

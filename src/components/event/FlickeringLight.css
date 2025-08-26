@@ -1,0 +1,23 @@
+.flickering-light {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200vw;
+  height: 200vh;
+  background: radial-gradient(circle, rgba(255, 220, 150, 0.1), transparent 60%);
+  transform: translate(-50%, -50%);
+  animation: flicker 5s infinite alternate;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}

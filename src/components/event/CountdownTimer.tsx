@@ -68,8 +68,8 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   const timerComponents = [
     { label: 'Dias', value: timeLeft.days },
     { label: 'Horas', value: timeLeft.hours },
-    { label: 'Minutos', value: timeLeft.minutes },
-    { label: 'Segundos', value: timeLeft.seconds },
+    { label: 'min', value: timeLeft.minutes },
+    { label: 'seg', value: timeLeft.seconds },
   ];
 
   return (
