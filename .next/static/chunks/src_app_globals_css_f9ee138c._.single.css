@@ -1230,6 +1230,10 @@ body {
   border-top-color: #0000;
 }
 
+.\!bg-stone-200\/80 {
+  background-color: #e7e5e4cc !important;
+}
+
 .bg-\[--color-bg\] {
   background-color: var(--color-bg);
 }
@@ -1302,14 +1306,6 @@ body {
   background-color: #0000;
 }
 
-.bg-white\/80 {
-  background-color: #fffc;
-}
-
-.bg-\[url\(\'\/flowers_deco\/flowers_deco\.png\'\)\] {
-  background-image: url("/flowers_deco/flowers_deco.png");
-}
-
 .bg-\[url\(\'\/paper-texture\.png\'\)\] {
   background-image: url("/paper-texture.png");
 }
@@ -1328,24 +1324,12 @@ body {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
-.bg-contain {
-  background-size: contain;
-}
-
 .bg-cover {
   background-size: cover;
 }
 
-.bg-bottom {
-  background-position: bottom;
-}
-
 .bg-center {
   background-position: center;
-}
-
-.bg-no-repeat {
-  background-repeat: no-repeat;
 }
 
 .fill-current {
@@ -1652,6 +1636,11 @@ body {
 
 .text-accent-foreground {
   color: hsl(var(--accent-foreground));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .text-card-foreground {
@@ -2048,10 +2037,10 @@ body {
 .flickering-light-center {
   pointer-events: none;
   z-index: 1;
-  background: radial-gradient(circle, #ffdc9640, #0000 50%);
+  background: radial-gradient(circle, #ffc859e5, #0000 40%);
   border-radius: 20%;
-  width: 100%;
-  height: 100%;
+  width: 130%;
+  height: 130%;
   animation: 4s infinite alternate flicker-center;
   position: absolute;
   top: 50%;
@@ -2098,6 +2087,19 @@ body {
 
 .placeholder\:text-muted-foreground::placeholder {
   color: hsl(var(--muted-foreground));
+}
+
+.placeholder\:text-foreground\/90::placeholder {
+  color: hsl(var(--foreground) / .9);
+}
+
+.placeholder\:text-primary::placeholder {
+  color: hsl(var(--primary));
+}
+
+.placeholder\:text-black::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
 .after\:absolute:after {

@@ -90,10 +90,12 @@ export default function HomePage() {
       const result = await addAttendee(guestName.trim());
       
       if (result.success) {
-        toast({
-          title: "¡Confirmación enviada!",
-          description: "Tu asistencia ha sido registrada correctamente. ¡Muchas gracias!",
-        });
+        const phoneNumber = "50500000000"; // Reemplaza con tu número de WhatsApp
+        const message = encodeURIComponent(`¡Hola! Confirmo mi asistencia a los XV de Fernanda. Mi nombre es ${guestName.trim()}. ¡Nos vemos!`);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
+        window.location.href = whatsappUrl;
+        
         setGuestName('');
       } else {
         toast({
@@ -106,7 +108,7 @@ export default function HomePage() {
       console.error("Confirmation error:", error);
       toast({
         title: "Error inesperado",
-        description: "Ocurrió un error. Por favor, revisa la consola o contacta al administrador.",
+        description: "Ocurrió un error. Por favor, contacta al administrador.",
         variant: "destructive",
       });
     } finally {
@@ -195,6 +197,7 @@ export default function HomePage() {
               width={200}
               height={242}
               data-ai-hint="quinceanera logo"
+              className="relative z-10"
             />
             <div className="flickering-light-center"></div>
           </div>
@@ -271,17 +274,14 @@ export default function HomePage() {
           </div>
         </div>
         
-        <div 
-          className="relative w-full bg-[url('/flowers_deco/flowers_deco.png')] bg-contain bg-no-repeat bg-bottom"
-        >
-          <div className="flex flex-col items-center pt-10 pb-24 px-4">
+        <div className="flex flex-col items-center pt-10 pb-24 px-4">
             <div className="flex flex-col items-center animate-in fade-in duration-1000 delay-[200ms] w-full max-w-xs">
               <Input
                 type="text"
                 placeholder="Nombre y Apellido"
                 value={guestName}
                 onChange={(e) => setGuestName(e.target.value)}
-                className="mt-4 mb-3 bg-white/80 border-primary text-center w-full max-w-[280px] placeholder:text-foreground/50"
+                className="mt-4 mb-3 !bg-stone-200/80 border-primary text-center w-full max-w-[280px] placeholder:text-black text-black"
                 aria-label="Tu nombre y apellido"
               />
               <Button
@@ -299,15 +299,12 @@ export default function HomePage() {
                   'Confirmar Asistencia'
                 )}
               </Button>
-              <p className="text-sm text-foreground/80 mt-2 text-center">
-                Por favor, confirma antes del 15 de Julio.
-              </p>
+
             </div>
             <div className="animate-in fade-in duration-1000 delay-[400ms] mt-4">
-              <p className="font-body text-lg sm:text-xl text-foreground/80 text-center px-4">¡Gracias por acompañarme <br/> en este día tan especial! <br/> ❤️</p>
+              <p className="font-body text-lg sm:text-xl text-foreground/80 text-center px-4">¡Gracias por acompañarme <br/> en este día tan especial!</p>
             </div>
           </div>
-        </div>
 
         {/* Footer */}
         <footer className="w-full text-center py-4 bg-background/80 dark:bg-neutral-900/80 text-foreground/60 text-xs bg-[url('/paper-texture.png')] bg-cover bg-center backdrop-blur-md">

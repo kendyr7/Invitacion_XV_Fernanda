@@ -113,9 +113,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%; /* 200% of the parent's width */
-  height: 100%; /* 200% of the parent's height */
-  background: radial-gradient(circle, rgba(255, 220, 150, 0.25), transparent 50%);
+  width: 130%; /* 200% of the parent's width */
+  height: 130%; /* 200% of the parent's height */
+  background: radial-gradient(circle, rgba(255, 200, 89, 0.897), transparent 40%);
   transform: translate(-50%, -50%);
   animation: flicker-center 4s infinite alternate;
   pointer-events: none;
