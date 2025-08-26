@@ -41,7 +41,7 @@ export default function HomePage() {
   const [isConfirming, setIsConfirming] = useState(false);
   const [showBackToTop, setShowBackToTop] = useState(false);
   const { toast } = useToast();
-  const audioSrc = "/audio/paradise-coldplay.mp3"; 
+  const audioSrc = "/audio/Coldplay - Clocks.mp3"; 
   const eventTargetDate = "2025-09-20T19:30:00-06:00";
 
   useEffect(() => {
@@ -111,19 +111,6 @@ export default function HomePage() {
       setIsConfirming(false);
     }
   };
-
-  const iconSizeTimeline = 28; 
-
-  const timelineEventsNew = [
-    { time: "7:30 PM", title: "Bienvenida", icon: <Martini size={iconSizeTimeline} className="text-primary"/> },
-    { time: "8:00 PM", title: "Baile con papa", icon: <Gem size={iconSizeTimeline} className="text-primary"/> }, 
-    { time: "8:05 PM", title: "Brindis", icon: <Wine size={iconSizeTimeline} className="text-primary"/> },
-    { time: "9:00 PM", title: "Cena", icon: <Utensils size={iconSizeTimeline} className="text-primary"/> },
-    { time: "10:00 PM", title: "Inicia Fiesta", icon: <Disc3 size={iconSizeTimeline} className="text-primary"/> }, 
-    { time: "11:30 PM", title: "Hora Loca", icon: <PartyPopper size={iconSizeTimeline} className="text-primary"/> },
-    { time: "12:30 AM", title: "Pastel", icon: <CakeSlice size={iconSizeTimeline} className="text-primary"/> },
-    { time: "1:30 AM", title: "Despedida", icon: <Car size={iconSizeTimeline} className="text-primary"/> },
-  ];
   
   if (!isOpened) {
     return (
@@ -161,46 +148,34 @@ export default function HomePage() {
       <div 
         className="relative z-10 flex flex-col items-center text-center max-w-2xl w-full bg-background/80 dark:bg-neutral-900/80 backdrop-blur-md rounded-xl shadow-2xl my-8 animate-in fade-in slide-in-from-bottom-10 duration-700 bg-[url('/paper-texture.jpg')] bg-cover bg-center overflow-hidden"
       >
-        <Image
-          src="/flowers_deco/flowers.png"
-          alt="Decoración floral superior izquierda"
-          width={1280}
-          height={953}
-          className="absolute top-0 left-0 opacity-80 z-0 animate-in fade-in duration-1000 delay-100"
-          data-ai-hint="floral corner decoration"
-        />
+        <div className="relative w-full h-screen">
+          <Image
+            src="/portada.jpg"
+            alt="Portada"
+            layout="fill"
+            objectFit="cover"
+            className="z-0"
+          />
+          <div className="absolute inset-0 flex flex-col items-center justify-end z-10 p-8 bg-gradient-to-t from-black/90 to-transparent">
+            <p className="font-headline text-3xl sm:text-4xl text-white mt-2 tracking-widest">Mis XV Años</p>
+            <p className="font-delistan text-7xl sm:text-9xl text-white">Fernanda Lara</p>
+          </div>
+        </div>
         <div className="mt-12 relative z-10 flex flex-col items-center text-center space-y-8 sm:space-y-10 p-4 sm:p-8">
         
           <Card className="bg-transparent border-none shadow-none w-full animate-in fade-in duration-1000 delay-200">
             <CardContent className="font-body text-lg sm:text-xl text-foreground/80 space-y-1 pt-6">
               <br/>
-              <p>Hay sueños que se viven una sola vez…</p>
-              <p>y este es uno de ellos.</p>
-              <br/>
-              <p>Te invito a compartir conmigo <br/>este día tan especial</p>
+              <p>Hay momentos inolvidables que se </p>
+              <p>atesoran en el corazón por siempre</p>
+              <p>Por eso, quiero que me acompañes</p>
+              <p>a vivir uno de ellos</p>
             </CardContent>
           </Card>
-
-          <div className="flex flex-col items-center mt-8 mb-6 animate-in fade-in duration-1000 delay-300">
-            <Image src="/tiara.png" alt="Tiara" width={100} height={100} data-ai-hint="tiara crown" className="drop-shadow-lg"/>
-            <p className="font-headline text-3xl sm:text-4xl text-primary mt-2 tracking-widest">Mis XV Años</p>
-          </div>
-
-          <div className="animate-in fade-in duration-1000 delay-400 mb-4 sm:mb-6">
-            <p className="font-delistan text-7xl sm:text-9xl text-primary">Fernanda Lara</p>
-          </div>
           
           <MusicPlayer audioSrc={audioSrc} autoPlay={isOpened} className="animate-in fade-in duration-1000 delay-500" />
 
-          <Card className="bg-transparent border-none shadow-none w-full animate-in fade-in duration-1000 delay-600">
-            <CardContent className="font-body text-lg sm:text-xl text-foreground/80 space-y-1 pt-6">
-              <p>Con la bendición de Dios y el amor de</p>
-              <p>mis padres, te espero con ilusión para</p>
-              <p>compartir este día tan soñado.</p>
-              <p className="font-headline text-lg sm:text-xl text-primary mt-2 tracking-widest">Mis XV Años</p>
-            </CardContent>
-          </Card>
-
+          
           <EventDateDisplay 
             monthName="Septiembre"
             dayName="Sábado"
@@ -210,20 +185,31 @@ export default function HomePage() {
             className="animate-in fade-in duration-1000 delay-700 text-primary"
           />
 
+          <div className="animate-in fade-in duration-1000 delay-900">
+            <Image
+              src="/decor.png"
+              alt="Mis XV Años"
+              width={100}
+              height={242}
+              data-ai-hint="quinceanera logo"
+            />
+          </div>
+
           <div className="w-full max-w-md animate-in fade-in duration-1000 delay-800">
             <CountdownTimer targetDate={eventTargetDate} />
           </div>
-
-          <div className="animate-in fade-in duration-1000 delay-900">
+          
+          <div className="w-full animate-in fade-in duration-1000 delay-900">
             <Image
-              src="/flowers_deco/pink_flower_d.png"
-              alt="Pink Flower Decoration"
-              width={400}
-              height={242}
-              data-ai-hint="pink flower"
+              src="/portrait.jpeg"
+              alt="Fernanda Lara"
+              width={700}
+              height={1050}
+              className="w-full h-auto rounded-lg shadow-lg"
+              data-ai-hint="quinceanera portrait"
             />
           </div>
-          
+
           <div className="w-full animate-in fade-in duration-1000 delay-1000">
             <SectionCard
               title="Ceremonia Religiosa"
@@ -251,33 +237,6 @@ export default function HomePage() {
               </div>
               <div className="mt-1 space-y-1 text-center">
                 <p className="flex items-center justify-center">DoubleTree by Hilton Managua,<br /> Salón Mombacho</p>
-              </div>
-            </SectionCard>
-          </div>
-
-          <div className="w-full animate-in fade-in duration-1000 delay-1200">
-            <SectionCard 
-              title="Itinerario de Actividades" 
-              icon={<ListChecks size={28} className="text-primary"/>}
-              contentClassName="px-0 pt-4 pb-4" 
-              titleClassName="text-primary"
-            >
-              <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto">
-                
-                {timelineEventsNew.length > 0 && (
-                   <div className="absolute top-0 bottom-0 left-1/2 w-[1.5px] bg-primary -translate-x-1/2 z-0"></div>
-                )}
-                <div className="space-y-0"> 
-                  {timelineEventsNew.map((event, index) => (
-                    <ActivityTimelineItem 
-                      key={index}
-                      time={event.time}
-                      title={event.title}
-                      icon={event.icon}
-                      align={index % 2 === 0 ? 'left' : 'right'} 
-                    />
-                  ))}
-                </div>
               </div>
             </SectionCard>
           </div>

@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from 'react';
-import { Play, Pause, SkipForward, SkipBack, Shuffle, Repeat } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
 import { cn } from '@/lib/utils';
@@ -53,7 +53,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ audioSrc, className, autoPlay
     if (typeof window !== "undefined" && audioSrc && isClient) {
       const audio = new Audio(audioSrc);
       audio.preload = "metadata";
-      audio.loop = false;
+      audio.loop = true;
       audioRef.current = audio;
       hasAutoPlayed.current = false; // Reset on src change
 
@@ -144,69 +144,41 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ audioSrc, className, autoPlay
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
-  const handleShuffle = () => {};
-  const handleSkipBack = () => {
-    if (audioRef.current) audioRef.current.currentTime = 0;
-  };
-  const handleSkipForward = () => {
-     if (audioRef.current && duration > 0) {
-        audioRef.current.currentTime = duration; 
-     }
-  };
-  const handleRepeat = () => {
-    if(audioRef.current) {
-        audioRef.current.loop = !audioRef.current.loop;
-        // You might want to update UI to reflect loop state
-    }
-  };
-
   if (!isClient) {
     return <div className={cn("w-full max-w-xs mx-auto py-4", className)}>Loading player...</div>; 
   }
 
   return (
     <div className={cn("w-full max-w-xs mx-auto py-3 flex flex-col items-center space-y-3", className)}>
-      <Slider
-        value={[currentTime]}
-        max={duration > 0 ? duration : 100} // Ensure max is not 0
-        step={1}
-        onValueChange={handleSeek}
-        className="w-full [&>span:first-child>span]:bg-primary [&>span:last-child]:bg-primary [&>span:last-child]:border-primary [&>span:last-child]:h-4 [&>span:last-child]:w-4 [&>span:last-child]:-top-1"
-        aria-label="Music progress"
-        disabled={duration === 0}
-      />
-      <div className="flex items-center justify-around w-full">
-        <Button variant="ghost" size="icon" onClick={handleShuffle} className="text-primary hover:text-primary/80" aria-label="Shuffle">
-          <Shuffle size={20} />
-        </Button>
-        <Button variant="ghost" size="icon" onClick={handleSkipBack} className="text-primary hover:text-primary/80" aria-label="Skip back">
-          <SkipBack size={22} />
-        </Button>
-        <Button 
-          variant="outline" 
-          size="icon" 
-          onClick={togglePlayPause} 
-          className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full h-12 w-12"
-          aria-label={isPlaying ? "Pause music" : "Play music"}
-          disabled={!audioSrc || duration === 0 && !isPlaying} // Disable if no src or not loaded
-        >
-          {isPlaying ? <Pause size={24} /> : <Play size={24} className="ml-0.5"/>}
-        </Button>
-        <Button variant="ghost" size="icon" onClick={handleSkipForward} className="text-primary hover:text-primary/80" aria-label="Skip forward">
-          <SkipForward size={22} />
-        </Button>
-        <Button variant="ghost" size="icon" onClick={handleRepeat} className="text-primary hover:text-primary/80" aria-label="Repeat">
-          <Repeat size={20} />
-        </Button>
+      <div className="w-full flex flex-col items-center space-y-2">
+        <Slider
+          value={[currentTime]}
+          max={duration > 0 ? duration : 100}
+          step={1}
+          onValueChange={handleSeek}
+          className="w-full"
+          aria-label="Music progress"
+          disabled={duration === 0}
+        />
+        {(duration > 0 || currentTime > 0) && (
+          <div className="text-xs text-muted-foreground w-full flex justify-between px-1">
+            <span>{formatTime(currentTime)}</span>
+            <span>{formatTime(duration)}</span>
+          </div>
+        )}
       </div>
-       {(duration > 0 || currentTime > 0) && ( // Show time if there is duration or current time (e.g. if loading)
-        <div className="text-xs text-muted-foreground w-full flex justify-between px-1">
-          <span>{formatTime(currentTime)}</span>
-          <span>{formatTime(duration)}</span>
-        </div>
-      )}
+      <Button 
+        variant="outline" 
+        size="icon" 
+        onClick={togglePlayPause} 
+        className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full h-12 w-12"
+        aria-label={isPlaying ? "Pause music" : "Play music"}
+        disabled={!audioSrc || (duration === 0 && !isPlaying)}
+      >
+        {isPlaying ? <Pause size={24} /> : <Play size={24} className="ml-0.5"/>}
+      </Button>
        {audioRef.current?.error && (
-        <div className="text-xs text-destructive text-center">
+        <div className="text-xs text-destructive text-center mt-2">
           Audio could not be loaded.
         </div>
       )}
