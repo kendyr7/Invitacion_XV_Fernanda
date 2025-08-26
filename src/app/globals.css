@@ -142,3 +142,61 @@
     @apply bg-background text-foreground font-body antialiased;
   }
 }
+
+svg path {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 0.8;
+  stroke-dasharray: 1000;   /* large value for smooth draw */
+  stroke-dashoffset: 1000; 
+  animation: textStroke 4s cubic-bezier(0.77, 0, 0.175, 1) forwards,
+  textFill 2s ease-in 3s forwards; /* delay fill */
+}
+
+/* Stroke draw animation */
+@keyframes textStroke {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Smooth fill fade-in */
+@keyframes textFill {
+  from {
+    fill: transparent;
+    opacity: 0;
+  }
+  to {
+    fill: #fff;
+    opacity: 1;
+  }
+}
+
+
+.gift-text {
+  position: relative;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* El sobre parte del centro arriba del texto */
+.envelope {
+  position: absolute;
+  top: -30px;            /* ajusta altura según prefieras */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.8rem;
+  animation: moveEnvelope 5s infinite ease-in-out;
+}
+
+@keyframes moveEnvelope {
+  0%   { transform: translate(-50%, 0) rotate(0deg); }
+  25%  { transform: translate(-150%, 0) rotate(-10deg); }
+  50%  { transform: translate(-50%, 0) rotate(0deg); }
+  75%  { transform: translate(50%, 0) rotate(10deg); }
+  100% { transform: translate(-50%, 0) rotate(0deg); }
+}

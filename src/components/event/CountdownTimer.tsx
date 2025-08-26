@@ -72,22 +72,32 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
     { label: 'seg', value: timeLeft.seconds },
   ];
 
-  return (
-    <div className="grid grid-cols-4 gap-4 text-center animate-in fade-in duration-1000 delay-500 w-full max-w-md">
-      {timerComponents.map((component, index) => (
-        component.value !== undefined && (
-          <div key={index} className="p-3 sm:p-4 rounded-lg transform transition-all hover:scale-120">
-            <div className="text-4xl sm:text-6xl font-headline font-bold text-primary mb-2">
-              {String(component.value).padStart(2, '0')}&nbsp;
-            </div>
-            <div className="text-sm sm:text-base text-primary uppercase tracking-wider font-body">
-              {component.label}
-            </div>
+return (
+  <div className="grid grid-cols-4 gap-4 text-center w-full max-w-md">
+    {timerComponents.map((component, index) => (
+      component.value !== undefined && (
+        <div
+          key={index}
+          className="p-3 sm:p-4 rounded-lg relative group"
+        >
+          {/* Golden ring effect */}
+          <div className="absolute inset-0 rounded-lg border border-[#b58e45]/40 group-hover:border-[#b58e45]/80 transition-all duration-500 shadow-[0_0_15px_rgba(181,142,69,0.3)]"></div>
+          
+          <div className="relative text-4xl sm:text-5xl font-bold text-[#b58e45] drop-shadow-[0_0_6px_rgba(181,142,69,0.6)] animate-pulse-slow">
+            {String(component.value).padStart(2, '0')}
           </div>
-        )
-      ))}
-    </div>
-  );
+          
+          <div className="relative text-xs sm:text-sm uppercase tracking-wider text-[#b58e45] font-light mt-1">
+            {component.label}
+          </div>
+        </div>
+      )
+    ))}
+  </div>
+);
+
+
+
 };
 
 export default CountdownTimer;

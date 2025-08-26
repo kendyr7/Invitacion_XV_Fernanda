@@ -4,20 +4,22 @@
   left: 50%;
   width: 200vw;
   height: 200vh;
-  background: radial-gradient(circle, rgba(255, 220, 150, 0.1), transparent 60%);
+  background: radial-gradient(circle, rgba(255, 230, 180, 0.15), transparent 70%);
   transform: translate(-50%, -50%);
-  animation: flicker 5s infinite alternate;
+  animation: flicker 4s infinite;
   pointer-events: none;
   z-index: 0;
+  mix-blend-mode: screen; /* makes it blend better with the rose */
 }
 
 @keyframes flicker {
-  0%, 100% {
-    opacity: 0.5;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
+  0%   { opacity: 0.4; transform: translate(-50%, -50%) scale(1); }
+  5%   { opacity: 0.6; transform: translate(-50%, -50%) scale(1.02); }
+  10%  { opacity: 0.3; transform: translate(-50%, -50%) scale(1.01); }
+  15%  { opacity: 0.8; transform: translate(-50%, -50%) scale(1.05); }
+  25%  { opacity: 0.5; transform: translate(-50%, -50%) scale(1.02); }
+  40%  { opacity: 0.7; transform: translate(-50%, -50%) scale(1.07); }
+  60%  { opacity: 0.4; transform: translate(-50%, -50%) scale(1.03); }
+  75%  { opacity: 0.9; transform: translate(-50%, -50%) scale(1.08); }
+  100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
 }
