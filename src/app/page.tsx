@@ -175,7 +175,6 @@ export default function HomePage() {
           
           <MusicPlayer audioSrc={audioSrc} autoPlay={isOpened} className="animate-in fade-in duration-1000 delay-500" />
 
-          
           <EventDateDisplay 
             monthName="Septiembre"
             dayName="Sábado"
@@ -187,9 +186,9 @@ export default function HomePage() {
 
           <div className="animate-in fade-in duration-1000 delay-900">
             <Image
-              src="/decor.png"
+              src="/decor1.png"
               alt="Mis XV Años"
-              width={100}
+              width={200}
               height={242}
               data-ai-hint="quinceanera logo"
             />
