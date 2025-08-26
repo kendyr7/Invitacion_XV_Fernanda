@@ -1547,12 +1547,6 @@ body {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
 }
 
-.from-black\/90 {
-  --tw-gradient-from: #000000e6 var(--tw-gradient-from-position);
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
 .from-black\/100 {
   --tw-gradient-from: #000 var(--tw-gradient-from-position);
   --tw-gradient-to: #0000 var(--tw-gradient-to-position);
@@ -1778,6 +1772,10 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }
 
+.font-bellisa {
+  font-family: Bellisa, cursive;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1969,6 +1967,10 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.text-secondary {
+  color: hsl(var(--secondary));
 }
 
 .underline-offset-4 {
@@ -2281,6 +2283,13 @@ body {
 @font-face {
   font-family: Delistan;
   src: url("/fonts/Delistan-nAAm4.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bellisa;
+  src: url("/fonts/Bellisa Script Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -3040,10 +3049,6 @@ body {
   background-color: #171717cc;
 }
 
-.dark\:bg-neutral-900\/90:is(.dark *) {
-  background-color: #171717e6;
-}
-
 @media (width >= 640px) {
   .sm\:static {
     position: static;
@@ -3215,6 +3220,11 @@ body {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"] {

@@ -157,8 +157,8 @@ export default function HomePage() {
             className="z-0"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-end z-10 p-8 bg-gradient-to-t from-black/100 to-transparent">
-            <p className="font-headline text-3xl sm:text-4xl text-white mt-2 tracking-widest">Mis XV Años</p>
-            <p className="font-delistan text-7xl sm:text-9xl text-white">Fernanda Lara Morales</p>
+            <p className="font-headline text-3xl sm:text-3xl text-white mt-2 tracking-widest">Mis XV Años</p>
+            <p className="font-bellisa text-7xl sm:text-9xl text-white">Fernanda Lara</p>
           </div>
         </div>
         <div className="mt-12 relative z-10 flex flex-col items-center text-center space-y-8 sm:space-y-10 p-4 sm:p-8">

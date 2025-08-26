@@ -15,6 +15,7 @@ export default {
         headline: ['var(--font-crimson-text)', 'serif'],
         'fleur-de-leah': ['var(--font-fleur-de-leah)', 'cursive'],
         delistan: ['Delistan', 'cursive'],
+        bellisa: ['Bellisa', 'cursive'],
         code: ['monospace'],
       },
       colors: {

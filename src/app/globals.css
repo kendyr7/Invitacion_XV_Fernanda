@@ -9,6 +9,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Bellisa';
+  src: url('/fonts/Bellisa Script Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @layer base {
   :root {
     --background: 220 9% 16%; /* Nuevo color de fondo: #24272e */

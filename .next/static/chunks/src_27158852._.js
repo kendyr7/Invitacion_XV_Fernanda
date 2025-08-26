@@ -1156,7 +1156,7 @@ function HomePage() {
                                 className: "absolute inset-0 flex flex-col items-center justify-end z-10 p-8 bg-gradient-to-t from-black/100 to-transparent",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-headline text-3xl sm:text-4xl text-white mt-2 tracking-widest",
+                                        className: "font-headline text-3xl sm:text-3xl text-white mt-2 tracking-widest",
                                         children: "Mis XV Años"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
@@ -1164,8 +1164,8 @@ function HomePage() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-delistan text-7xl sm:text-9xl text-white",
-                                        children: "Fernanda Lara Morales"
+                                        className: "font-bellisa text-7xl sm:text-9xl text-white",
+                                        children: "Fernanda Lara"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
                                         lineNumber: 161,
