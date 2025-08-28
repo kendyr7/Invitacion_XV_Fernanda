@@ -3,28 +3,22 @@
 import type { ReactNode } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { MapPin, ExternalLink } from 'lucide-react'; 
+import { MapPin } from 'lucide-react';
+import { LocationModal } from './LocationModal';
 
 interface SectionCardProps {
   title: string;
   icon?: ReactNode;
   children: ReactNode;
-  locationButton?: {
-    text: string;
-    url: string;
-  };
+  googleMapsUrl?: string;
+  wazeUrl?: string;
   className?: string;
   titleClassName?: string;
   contentClassName?: string;
   animationDelay?: string;
 }
 
-const SectionCard: React.FC<SectionCardProps> = ({ title, icon, children, locationButton, className, titleClassName, contentClassName, animationDelay }) => {
-  const handleLocationClick = () => {
-    if (locationButton) {
-      window.open(locationButton.url, '_blank', 'noopener,noreferrer');
-    }
-  };
+const SectionCard: React.FC<SectionCardProps> = ({ title, icon, children, googleMapsUrl, wazeUrl, className, titleClassName, contentClassName, animationDelay }) => {
 
   return (
     <Card 
@@ -39,20 +33,14 @@ const SectionCard: React.FC<SectionCardProps> = ({ title, icon, children, locati
       </CardHeader>
       <CardContent className={`font-body text-base sm:text-lg text-foreground/90 space-y-2 text-center ${contentClassName}`}>
         {children}
-        {locationButton && (
+        {googleMapsUrl && wazeUrl && (
           <div className="mt-4 text-center">
-            <a 
-              href={locationButton.url}
-              onClick={(e) => {
-                e.preventDefault();
-                handleLocationClick();
-              }}
-              className="inline-flex items-center text-primary hover:text-primary/80 hover:underline transition-colors cursor-pointer"
-            >
-              <MapPin className="mr-2 h-4 w-4" />
-              {locationButton.text}
-              <ExternalLink className="ml-1 h-3 w-3" />
-            </a>
+            <LocationModal googleMapsUrl={googleMapsUrl} wazeUrl={wazeUrl}>
+              <Button className="mt-5 inline-flex items-center text-white hover:text-secondary/80 transition-colors">
+                <MapPin className="mr-2 h-4 w-4" />
+                Ubicación
+              </Button>
+            </LocationModal>
           </div>
         )}
       </CardContent>

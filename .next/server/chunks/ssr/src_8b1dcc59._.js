@@ -410,12 +410,12 @@ const CountdownTimer = ({ targetDate })=>{
         }
     ];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "grid grid-cols-4 gap-4 text-center w-full max-w-md",
+        className: "grid grid-cols-4 gap-4 text-center w-full max-w-md animate-in fade-in duration-1000 delay-500 mt-9 mb-8",
         children: timerComponents.map((component, index)=>component.value !== undefined && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "p-3 sm:p-4 rounded-lg relative group",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "absolute inset-0 rounded-lg border border-[#b58e45]/40 group-hover:border-[#b58e45]/80 transition-all duration-500 shadow-[0_0_15px_rgba(181,142,69,0.3)]"
+                        className: "absolute inset-0 rounded-lg border border-white/40 group-hover:border-white/80 transition-all duration-500 shadow-[0_0_15px_rgba(255,255,255,0.3)]"
                     }, void 0, false, {
                         fileName: "[project]/src/components/event/CountdownTimer.tsx",
                         lineNumber: 84,
@@ -430,7 +430,7 @@ const CountdownTimer = ({ targetDate })=>{
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                        className: "relative text-xs sm:text-sm uppercase tracking-wider text-[#b58e45] font-light mt-1",
+                        className: "relative text-xs sm:text-sm uppercase tracking-wider text-white font-light mt-1",
                         children: component.label
                     }, void 0, false, {
                         fileName: "[project]/src/components/event/CountdownTimer.tsx",
@@ -898,7 +898,7 @@ function HomePage() {
         }
         setIsConfirming(true);
         try {
-            const phoneNumber = "50500000000"; // Reemplaza con tu número de WhatsApp
+            const phoneNumber = "50578428140"; // Reemplaza con tu número de WhatsApp
             const message = encodeURIComponent(`¡Hola! Confirmo mi asistencia a los XV de Fernanda. Mi nombre es ${guestName.trim()}. ¡Nos vemos!`);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
             window.location.href = whatsappUrl;
@@ -995,8 +995,8 @@ function HomePage() {
                                 className: "absolute inset-0 flex flex-col items-center justify-end z-10 p-8 bg-gradient-to-t from-black/100 to-transparent",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "font-headline text-3xl sm:text-3xl text-white mt-2 tracking-widest",
-                                        children: "Mis XV Años"
+                                        className: "font-headline text-2xl sm:text-2xl text-[#b58e45] mt-2 tracking-widest",
+                                        children: "MIS XV AÑOS"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
                                         lineNumber: 154,
@@ -1117,10 +1117,10 @@ function HomePage() {
                                 className: "relative animate-in fade-in duration-1000 delay-900",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                        src: "/decor1.png",
+                                        src: "/decor.png",
                                         alt: "Mis XV Años",
-                                        width: 200,
-                                        height: 242,
+                                        width: 130,
+                                        height: 142,
                                         "data-ai-hint": "quinceanera logo",
                                         className: "relative z-10"
                                     }, void 0, false, {
@@ -1168,7 +1168,7 @@ function HomePage() {
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex flex-col items-center space-y-2 mb-3",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                                src: "/champagne.png",
+                                                src: "/xv.png",
                                                 alt: "champagne Icon",
                                                 width: 40,
                                                 height: 40,
@@ -1239,7 +1239,7 @@ function HomePage() {
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                                            src: "/dress-code-fix.png",
+                                            src: "/dress-code-fix1.png",
                                             alt: "Código de Vestimenta Formal",
                                             width: 300,
                                             height: 300,
@@ -1368,14 +1368,14 @@ function HomePage() {
                         className: "flex flex-col items-center pt-10 pb-24 px-4",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "flex flex-col items-center animate-in fade-in duration-1000 delay-[200ms] w-full max-w-xs",
+                                className: "flex flex-col items-center animate-in fade-in duration-1000 delay-[200ms] w-full max-w-xs mb-8",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$ui$2f$input$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Input"], {
                                         type: "text",
                                         placeholder: "Nombre y Apellido",
                                         value: guestName,
                                         onChange: (e)=>setGuestName(e.target.value),
-                                        className: "mt-4 mb-3 !bg-stone-200/80 border-primary text-center w-full max-w-[280px] placeholder:text-black text-black",
+                                        className: "mt-4 mb-3 !bg-stone-200/80 border-primary text-center w-full max-w-[280px] placeholder:text-black text-black mb-7",
                                         "aria-label": "Tu nombre y apellido"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/page.tsx",
@@ -1411,19 +1411,11 @@ function HomePage() {
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "animate-in fade-in duration-1000 delay-[400ms] mt-4",
+                                className: "animate-in fade-in duration-1000 delay-[400ms] mt-9",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "font-body text-lg sm:text-xl text-foreground/80 text-center px-4",
-                                    children: [
-                                        "¡Gracias por acompañarme ",
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                            fileName: "[project]/src/app/page.tsx",
-                                            lineNumber: 287,
-                                            columnNumber: 120
-                                        }, this),
-                                        " en este día tan especial!"
-                                    ]
-                                }, void 0, true, {
+                                    children: "¡Te esperamos!"
+                                }, void 0, false, {
                                     fileName: "[project]/src/app/page.tsx",
                                     lineNumber: 287,
                                     columnNumber: 15
