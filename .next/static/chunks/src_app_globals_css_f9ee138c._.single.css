@@ -585,12 +585,12 @@ body {
   margin-top: 1rem;
 }
 
-.mt-9 {
-  margin-top: 2.25rem;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
 }
 
 .block {
@@ -1161,6 +1161,10 @@ body {
   border-style: none;
 }
 
+.border-\[\#b58e45\]\/40 {
+  border-color: #b58e4566;
+}
+
 .border-\[--color-border\] {
   border-color: var(--color-border);
 }
@@ -1200,14 +1204,6 @@ body {
 
 .border-transparent {
   border-color: #0000;
-}
-
-.border-white\/40 {
-  border-color: #fff6;
-}
-
-.border-\[\#b58e45\]\/40 {
-  border-color: #b58e4566;
 }
 
 .border-l-transparent {
@@ -1715,10 +1711,6 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-secondary {
-  color: hsl(var(--secondary));
 }
 
 .underline-offset-4 {
@@ -2278,24 +2270,16 @@ svg path {
   color: hsl(var(--primary-foreground));
 }
 
-.hover\:text-primary\/80:hover {
-  color: hsl(var(--primary) / .8);
-}
-
 .hover\:text-secondary-foreground:hover {
   color: hsl(var(--secondary-foreground));
 }
 
-.hover\:text-sidebar-accent-foreground:hover {
-  color: hsl(var(--sidebar-accent-foreground));
-}
-
-.hover\:text-\[\#b58e45\]\/80:hover {
-  color: #b58e45cc;
-}
-
 .hover\:text-secondary\/80:hover {
   color: hsl(var(--secondary) / .8);
+}
+
+.hover\:text-sidebar-accent-foreground:hover {
+  color: hsl(var(--sidebar-accent-foreground));
 }
 
 .hover\:underline:hover {
@@ -2425,10 +2409,6 @@ svg path {
 
 .group\/menu-item:focus-within .group-focus-within\/menu-item\:opacity-100 {
   opacity: 1;
-}
-
-.group:hover .group-hover\:border-white\/80 {
-  border-color: #fffc;
 }
 
 .group:hover .group-hover\:border-\[\#b58e45\]\/80 {

@@ -182,7 +182,7 @@ const metadata = {
     title: 'Invitación XV Años Fernanda Lara',
     description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
     icons: {
-        icon: '/favicon-32x32.png'
+        icon: '/favicon.ico'
     }
 };
 function RootLayout({ children }) {
