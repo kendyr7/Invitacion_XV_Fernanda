@@ -213,6 +213,8 @@ export default function HomePage() {
                 timeZone="America/Managua"
                 location="DoubleTree by Hilton Managua, Salón Mombacho"
                 options={['Apple', 'Google', 'iCal', 'Outlook.com', 'Yahoo']}
+                language="es"
+                label="Agregar al Calendario"
                 styleLight="--btn-background: #b58e45; --btn-text: #ffffff; --btn-border: #b58e45; --btn-shadow: #b58e45; --btn-shadow-hover: #b58e45;"
                 styleDark="--btn-background: #b58e45; --btn-text: #ffffff; --btn-border: #b58e45; --btn-shadow: #b58e45; --btn-shadow-hover: #b58e45;"
               />

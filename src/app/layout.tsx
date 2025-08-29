@@ -25,6 +25,23 @@ export const metadata: Metadata = {
   description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
   icons: {
     icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  openGraph: {
+    title: 'Invitación XV Años Fernanda',
+    description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
+    images: [
+      {
+        url: '/favicon.ico',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Invitación XV Años Fernanda',
+    description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
+    images: ['/favicon.ico'],
   },
 };
 
