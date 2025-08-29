@@ -85,12 +85,14 @@ export default function HomePage() {
 
     setIsConfirming(true);
     try {
-      const phoneNumber = "50578428140"; // Reemplaza con tu número de WhatsApp
-      const message = encodeURIComponent(`¡Hola! Confirmo mi asistencia a los XV de Fernanda. Mi nombre es ${guestName.trim()}. ¡Nos vemos!`);
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-
-      window.location.href = whatsappUrl;
+      const phoneNumbers = ["50578428140", "50581839380"]; // Reemplaza con tus números de WhatsApp
+      const message = encodeURIComponent(`¡Hola! Soy ${guestName.trim()} y confirmo mi asistencia a la celebración de los XV años de Fernanda. ¡Estoy muy emocionado/a de celebrar con ustedes! ¡Nos vemos en la fiesta!`);
       
+      phoneNumbers.forEach(phoneNumber => {
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+      });
+
       setGuestName('');
     } catch (error) {
       console.error("Confirmation error:", error);
@@ -287,7 +289,7 @@ export default function HomePage() {
 
             </div>
             <div className="animate-in fade-in duration-1000 delay-[400ms] mt-9">
-              <p className="font-body text-lg sm:text-xl text-foreground/80 text-center px-4">¡Te esperamos!</p>
+              <p className="font-body text-lg sm:text-xl text-foreground/80 text-center px-4">¡Esperamos contar con su presencia! <br />Muchas Gracias!</p>
             </div>
           </div>
 

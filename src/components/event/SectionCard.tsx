@@ -37,8 +37,7 @@ const SectionCard: React.FC<SectionCardProps> = ({ title, icon, children, google
           <div className="mt-4 text-center">
             <LocationModal googleMapsUrl={googleMapsUrl} wazeUrl={wazeUrl}>
               <Button className="mt-5 inline-flex items-center text-white hover:text-secondary/80 transition-colors">
-                <MapPin className="mr-2 h-4 w-4" />
-                Ubicación
+                Ver Ubicación
               </Button>
             </LocationModal>
           </div>
