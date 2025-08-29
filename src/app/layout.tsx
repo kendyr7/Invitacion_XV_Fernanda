@@ -21,7 +21,7 @@ const fleurDeLeah = Fleur_De_Leah({
 });
 
 export const metadata: Metadata = {
-  title: 'Invitación XV Años Fernanda Lara',
+  title: 'Invitación XV Años Fernanda',
   description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
   icons: {
     icon: '/favicon.ico',
