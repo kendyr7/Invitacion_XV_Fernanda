@@ -86,7 +86,7 @@ export default function HomePage() {
 
     setIsConfirming(true);
     try {
-      const phoneNumbers = ["50578428140", "50581839380"]; // Reemplaza con tus números de WhatsApp
+      const phoneNumbers = ["50578428140"]; // Reemplaza con tus números de WhatsApp
       const message = encodeURIComponent(`¡Hola! Soy ${guestName.trim()} y confirmo mi asistencia a la celebración de los XV años de Fernanda. ¡Estoy muy emocionado/a de celebrar con ustedes! ¡Nos vemos en la fiesta!`);
       
       phoneNumbers.forEach(phoneNumber => {
