@@ -521,6 +521,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.-mt-12 {
+  margin-top: -3rem;
+}
+
 .mb-1 {
   margin-bottom: .25rem;
 }
@@ -1314,41 +1318,9 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
-.from-black\/60 {
-  --tw-gradient-from: #0009 var(--tw-gradient-from-position);
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.from-black\/70 {
-  --tw-gradient-from: #000000b3 var(--tw-gradient-from-position);
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-}
-
-.via-black\/40 {
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #0006 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-black\/60 {
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #0009 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-black\/30 {
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #0000004d var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
 .via-black\/20 {
   --tw-gradient-to: #0000 var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), #0003 var(--tw-gradient-via-position), var(--tw-gradient-to);
-}
-
-.via-black\/15 {
-  --tw-gradient-to: #0000 var(--tw-gradient-to-position);
-  --tw-gradient-stops: var(--tw-gradient-from), #00000026 var(--tw-gradient-via-position), var(--tw-gradient-to);
 }
 
 .to-transparent {
@@ -1469,6 +1441,10 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.pb-10 {
+  padding-bottom: 2.5rem;
+}
+
 .pb-24 {
   padding-bottom: 6rem;
 }
@@ -1517,16 +1493,8 @@ body {
   padding-top: 1.5rem;
 }
 
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
 .pb-5 {
   padding-bottom: 1.25rem;
-}
-
-.pb-9 {
-  padding-bottom: 2.25rem;
 }
 
 .text-left {
@@ -1543,10 +1511,6 @@ body {
 
 .align-middle {
   vertical-align: middle;
-}
-
-.font-bellisa {
-  font-family: Bellisa, cursive;
 }
 
 .font-body, .font-headline {
@@ -1577,17 +1541,8 @@ body {
   line-height: 1;
 }
 
-.text-7xl {
-  font-size: 4.5rem;
-  line-height: 1;
-}
-
 .text-\[0\.8rem\] {
   font-size: .8rem;
-}
-
-.text-\[28vw\] {
-  font-size: 28vw;
 }
 
 .text-base {
@@ -1613,11 +1568,6 @@ body {
 .text-xs {
   font-size: .75rem;
   line-height: 1rem;
-}
-
-.text-9xl {
-  font-size: 8rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -1771,14 +1721,6 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-white\/40 {
-  color: #fff6;
-}
-
-.text-white\/20 {
-  color: #fff3;
 }
 
 .underline-offset-4 {
@@ -3089,6 +3031,11 @@ svg path {
     text-align: left;
   }
 
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -3109,15 +3056,6 @@ svg path {
     line-height: 1;
   }
 
-  .sm\:text-9xl {
-    font-size: 8rem;
-    line-height: 1;
-  }
-
-  .sm\:text-\[28vw\] {
-    font-size: 28vw;
-  }
-
   .sm\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3136,18 +3074,6 @@ svg path {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .sm\:text-\[22vw\] {
-    font-size: 22vw;
-  }
-
-  .sm\:text-\[12rem\] {
-    font-size: 12rem;
-  }
-
-  .sm\:text-\[10rem\] {
-    font-size: 10rem;
   }
 
   .data-\[state\=open\]\:sm\:slide-in-from-bottom-full[data-state="open"] {
@@ -3176,10 +3102,6 @@ svg path {
     max-width: 420px;
   }
 
-  .md\:text-\[18vw\] {
-    font-size: 18vw;
-  }
-
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -3188,14 +3110,6 @@ svg path {
   .md\:text-sm {
     font-size: .875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-\[15rem\] {
-    font-size: 15rem;
-  }
-
-  .md\:text-\[13rem\] {
-    font-size: 13rem;
   }
 
   .md\:opacity-0 {
@@ -3227,38 +3141,6 @@ svg path {
     --tw-shadow: 0 1px 3px 0 #0000001a, 0 1px 2px -1px #0000001a;
     --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-  }
-}
-
-@media (width >= 1024px) {
-  .lg\:text-\[18vw\] {
-    font-size: 18vw;
-  }
-
-  .lg\:text-\[16vw\] {
-    font-size: 16vw;
-  }
-
-  .lg\:text-\[20rem\] {
-    font-size: 20rem;
-  }
-
-  .lg\:text-\[17rem\] {
-    font-size: 17rem;
-  }
-
-  .lg\:text-\[19rem\] {
-    font-size: 19rem;
-  }
-}
-
-@media (width >= 1280px) {
-  .xl\:text-\[14vw\] {
-    font-size: 14vw;
-  }
-
-  .xl\:text-\[25rem\] {
-    font-size: 25rem;
   }
 }
 
