@@ -23,6 +23,7 @@ const fleurDeLeah = Fleur_De_Leah({
 export const metadata: Metadata = {
   title: 'Invitación XV Años Fernanda',
   description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
@@ -31,17 +32,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Invitación XV Años Fernanda',
     description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
+    type: 'website',
+    siteName: 'Invitación XV Años Fernanda',
     images: [
       {
-        url: '/favicon.ico',
+        url: '/xv.png',
+        width: 1200,
+        height: 630,
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Invitación XV Años Fernanda',
     description: 'Acompañanos a celebrar los XV Años de Fernanda Lara',
-    images: ['/favicon.ico'],
+    images: ['/xv.png'],
   },
 };
 
