@@ -18,10 +18,10 @@
 
 @layer base {
   :root {
-    --background: 220 9% 16%; /* Nuevo color de fondo: #24272e */
+    --background: 217, 49%, 23%; /* -background: 220 9% 16% Nuevo color de fondo: #24272e */
     --foreground: 0 0% 98%; /* Ajustado para mejor contraste con el fondo oscuro */
 
-    --card: 220 9% 16%;
+    --card: 217, 50%, 23%;
     --card-foreground: 0 0% 98%;
 
     --popover: 220 9% 16%;
@@ -30,7 +30,7 @@
     --primary: 39 45% 49%; /* Nuevo color primario: #b79146 */
     --primary-foreground: 0 0% 98%; /* Texto blanco para mejor contraste */
 
-    --secondary: 14 40% 24%; /* Nuevo color secundario para detalles: #562e24 */
+    --secondary: 352, 70%, 21%; /* Nuevo color secundario para detalles: #562e24 */
     --secondary-foreground: 0 0% 98%; /* Texto claro para contraste */
 
     --muted: 220 9% 25%; /* Versión más clara del fondo */
@@ -115,7 +115,7 @@
   left: 50%;
   width: 150%; /* 200% of the parent's width */
   height: 150%; /* 200% of the parent's height */
-  background: radial-gradient(circle, rgba(134, 133, 133, 0.897), transparent 40%);
+  background: radial-gradient(circle, rgba(181, 142, 69, 0.897), transparent 40%);
   transform: translate(-50%, -50%);
   animation: flicker-center 3s infinite alternate;
   pointer-events: none;
